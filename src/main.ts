@@ -29,3 +29,11 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
+
+// new Vue({
+//   el: '#app',
+//   router,
+//   render: h => {
+//     return h(App)
+//   }
+// })
