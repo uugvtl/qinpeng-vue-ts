@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h1 @click="greet">{{ msg }}</h1>
+    <h2 @click="greet">Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
@@ -23,9 +23,15 @@
 
   import Vue from 'vue'
   import Component from 'vue-class-component'
-  @Component
+  @Component({})
   export default class HelloWorld extends Vue {
     public msg:string = 'Welcome to Your Vue.js App'
+
+    greet (e:Event) {
+      console.log('greeting: ' + this.msg)
+      console.log(e)
+    }
+
   }
 
 </script>
