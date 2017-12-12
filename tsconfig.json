@@ -15,7 +15,6 @@
     "moduleResolution": "node",
     "isolatedModules": true,
     "noImplicitThis": true,
-    "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
 
