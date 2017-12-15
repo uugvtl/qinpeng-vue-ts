@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1 @click="greet">{{ msg }}</h1>
+    <h1 @click="greet" v-html="msg"></h1>
     <h2 @click="greet">Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -27,9 +27,8 @@
   export default class HelloWorld extends Vue {
     public msg:string = 'Welcome to Your Vue.js App'
 
-    greet (e:Event) {
-      console.log('greeting: ' + this.msg)
-      console.log(e)
+    get greet () {
+      return 'greeting: ' + this.msg
     }
 
   }
