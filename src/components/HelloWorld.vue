@@ -24,7 +24,7 @@
   import Vue from 'vue'
   import Component from 'vue-class-component'
   @Component({})
-  export default class HelloWorld extends Vue {
+  export default class extends Vue {
     public msg:string = 'Welcome to Your Vue.js App'
 
     get greet () {

@@ -8,9 +8,26 @@
 <script lang="ts">
   import Vue from 'vue'
   import Component from 'vue-class-component'
+  import axios from 'axios'
+  // Vue.prototype.$http = axios
 
   @Component
-  export default class App extends Vue {}
+  export default class extends Vue {
+    a = 'abc'
+    created () {
+      // `this` 指向 vm 实例
+
+      axios.get('/admin/list/index')
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (response) {
+          console.log(response);
+        });
+
+      console.log('a is: ' + this.a)
+    }
+  }
 
 </script>
 

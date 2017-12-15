@@ -6,7 +6,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import ElementUI from 'element-ui'
-import axios from 'axios'
 import VueRx from 'vue-rx'
 import { Observable } from 'rxjs/Observable'
 import { Subscription } from 'rxjs/Subscription' // Disposable if using RxJS4
@@ -21,7 +20,6 @@ Vue.use(VueRx, {
 Vue.use(ElementUI)
 
 Vue.config.productionTip = false
-Vue.prototype.$http = axios
 /* eslint-disable no-new */
 const v = new Vue({
   router,
