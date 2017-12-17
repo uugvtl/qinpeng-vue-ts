@@ -24,13 +24,13 @@ Vue.use(ElementUI)
 Vue.config.productionTip = false
 /* eslint-disable no-new */
 
-const v = new Vue({
+const vue$ = new Vue({
   router,
   template: '<App/>',
   components: { App }
 })
 
-v.$mount('#app')
+vue$.$mount('#app')
 
 // new Vue({
 //   el: '#app',
