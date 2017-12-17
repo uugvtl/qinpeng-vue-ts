@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+    <div v-html="msg"></div>
     <img src="./assets/logo.png">
-    <router-view/>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,23 +10,17 @@
   import Vue from 'vue'
   import Component from 'vue-class-component'
   import axios from 'axios'
-  // Vue.prototype.$http = axios
 
   @Component
   export default class extends Vue {
-    a = 'abc'
+    msg = 'abc'
+
     created () {
-      // `this` 指向 vm 实例
-
       axios.get('/admin/list/index')
-        .then(function (response) {
-          console.log(response);
+        .then(res=>{
+          this.msg = res.data.msg
         })
-        .catch(function (response) {
-          console.log(response);
-        });
-
-      console.log('a is: ' + this.a)
+        .catch(res=>console.log(res));
     }
   }
 
