@@ -2,7 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import 'element-ui/lib/theme-chalk/index.css'
 import App from '@/App.vue'
-import router from './router'
+import router from '@/router'
+
 import Vue from 'vue'
 import ElementUI from 'element-ui'
 import VueRx from 'vue-rx'

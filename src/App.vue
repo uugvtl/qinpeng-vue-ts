@@ -9,19 +9,11 @@
 <script lang="ts">
   import Vue from 'vue'
   import Component from 'vue-class-component'
-  import axios from 'axios'
+
 
   @Component
   export default class extends Vue {
     msg = 'abc'
-
-    created () {
-      axios.get('/admin/list/index')
-        .then(res=>{
-          this.msg = res.data.msg
-        })
-        .catch(res=>console.log(res));
-    }
   }
 
 </script>
