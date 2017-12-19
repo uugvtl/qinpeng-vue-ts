@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div v-html="msg"></div>
+    <router-link :to="{ path: 'login' }">Login</router-link>
     <img src="./assets/logo.png">
     <router-view></router-view>
   </div>
@@ -12,9 +12,7 @@
 
 
   @Component
-  export default class extends Vue {
-    msg = 'abc'
-  }
+  export default class extends Vue {}
 
 </script>
 
