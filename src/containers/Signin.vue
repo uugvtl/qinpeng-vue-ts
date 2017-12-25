@@ -9,7 +9,7 @@
             <div class="B-register">
 
               <div class="Need">
-                <h1 class="clearfix"><span class="fl">用户名称</span><i class="fr">error</i></h1>
+                <h1 class="clearfix"><span class="fl">用户名称</span></h1>
                 <dl>
                   <dt class="fl user-name"></dt>
                   <dd class="fr">
@@ -19,7 +19,7 @@
               </div>
 
               <div class="Need">
-                <h1 class="clearfix"><span class="fl">用户密码</span><i class="fr">error</i></h1>
+                <h1 class="clearfix"><span class="fl">用户密码</span></h1>
                 <dl>
                   <dt class="fl user-password"></dt>
                   <dd class="fr">
@@ -30,6 +30,10 @@
 
               <input type="hidden" name="" value="">
               <input class="B-button" type="submit" name="btn_submit" value="登录">
+
+              <div class="Need">
+                <div style="color: #F00;text-align: center" v-html="errormsg"></div>
+              </div>
             </div>
           </form>
 
@@ -44,10 +48,23 @@
   import '@/assets/admin/style/login.css'
   import Vue from 'vue'
   import Component from 'vue-class-component'
-  @Component
-  export default class extends Vue {}
+
+  @Component({
+  })
+  export default class extends Vue
+  {
+    signin = {
+      account: '',
+      password: '',
+      security_key:'',
+      security_value:''
+    }
+
+    errormsg:string = ''
+
+    created(){
+      this.signin.security_key = ''
+    }
+  }
 
 </script>
-
-<style scoped>
-</style>
