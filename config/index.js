@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/': {
-        target: 'http://qinpeng.lc/',  // 接口域名
+        target: 'http://daierxi.lc/',  // 接口域名
         changeOrigin: true  //是否跨域
       }
     },
