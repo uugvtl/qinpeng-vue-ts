@@ -11,9 +11,16 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/': {
-        target: 'http://daierxi.lc/',  // 接口域名
-        changeOrigin: true  //是否跨域
+      // '/': {
+      //   target: 'http://daierxi.lc',  // 接口域名
+      //   changeOrigin: true  //是否跨域
+      // }
+      '/manager': {
+        target: 'http://daierxi.lc',
+        changeOrigin: true,               //是否跨域
+        pathRewrite: {
+          '^/manager': '/manager'
+        }
       }
     },
     // Various Dev Server settings
